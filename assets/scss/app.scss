@@ -83,8 +83,10 @@ nav {
       align-self: center;
       color: #fff;
       font-family: $primary-font;
+      font-size: 2rem;
       line-height: 1.4rem;
-      text-align: justify;
+      margin: auto;
+      text-align: center;
     }
   }
 }
@@ -125,7 +127,7 @@ nav {
       padding-bottom: 3rem;
     }
     a {
-      color: #f2f2f2;
+      color: #5a6d73;
       font-family: $links;
       text-decoration: none;
       &:hover {
@@ -179,10 +181,10 @@ nav {
       padding-bottom: 1rem;
     }
     i {
-      color: #d6d6d6c7;
+      color: #929191c7;
     }
     a {
-      color: #c1b99f;
+      color: #58564d;
       font-family: $links;
       font-size: 1.2rem;
       padding-left: 0.5rem;
