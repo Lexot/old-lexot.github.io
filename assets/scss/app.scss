@@ -1,23 +1,195 @@
 // External libs
-@import '../../node_modules/breakpoint-sass/stylesheets/breakpoint';
+@import "../../node_modules/breakpoint-sass/stylesheets/breakpoint";
 
 // Functions
-@import 'functions/rem-calc';
+@import "functions/rem-calc";
 
 // Core
-@import 'core/reset';
-@import 'core/accessibility';
-@import 'core/breakpoints';
-@import 'core/colors';
-@import 'core/fonts';
-@import 'core/global';
-@import 'core/page-layout';
-@import 'core/typography';
+@import "core/reset";
+@import "core/accessibility";
+@import "core/breakpoints";
+@import "core/colors";
+@import "core/fonts";
+@import "core/global";
+@import "core/page-layout";
+@import "core/typography";
 
 // Components
-@import 'components/buttons';
-@import 'components/lists';
-@import 'components/tabs';
+@import "components/buttons";
+@import "components/lists";
+@import "components/tabs";
 
 // Templates
-@import 'templates/example';
+@import "templates/example";
+
+nav {
+  display: flex;
+  font-family: $links;
+  height: 3.5rem;
+  background-color: #2d2d2da3;
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+
+.container {
+  margin: auto;
+  width: 70%;
+  ul {
+    display: flex;
+    justify-content: flex-end;
+    li {
+      display: inline-block;
+      padding-left: 60px;
+      a {
+        color: #d8d8d8;
+        text-decoration: none;
+        &:hover {
+          color: $hover-color;
+        }
+      }
+    }
+  }
+}
+
+.banner {
+  background-color: #2f4b59;
+  .container {
+    display: flex;
+    flex-direction: row;
+    padding: 4rem 0;
+
+    @include breakpoint($small) {
+      flex-direction: column;
+    }
+
+    @include breakpoint($medium) {
+      flex-direction: column;
+    }
+
+    @include breakpoint($large) {
+      flex-direction: row;
+    }
+
+    @include breakpoint($x-large) {
+      flex-direction: row;
+    }
+    img {
+      align-self: center;
+      max-width: 600px;
+      width: 100%;
+    }
+    span {
+      align-self: center;
+      color: #fff;
+      font-family: $primary-font;
+      line-height: 1.4rem;
+      text-align: justify;
+    }
+  }
+}
+
+.portfolio {
+  background-color: #c1b99f;
+  padding-top: 5rem;
+  text-align: center;
+  h2 {
+    color: #536873;
+    font-size: 2.3rem;
+    font-family: $titles;
+  }
+  .container {
+    display: grid;
+    grid-gap: 2rem;
+    grid-auto-rows: minmax(100px, auto);
+    padding: 6rem 0;
+
+    @include breakpoint($small) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    @include breakpoint($medium) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include breakpoint($large) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    @include breakpoint($x-large) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+    img {
+      width: 100%;
+      max-width: 600px;
+      padding-bottom: 3rem;
+    }
+    a {
+      color: #f2f2f2;
+      font-family: $links;
+      text-decoration: none;
+      &:hover {
+        color: $hover-color;
+      }
+    }
+  }
+}
+
+.contact {
+  background-color: #f2f2f2;
+  text-align: center;
+  h2 {
+    color: #536873;
+    font-size: 2.3rem;
+    font-family: $titles;
+    padding-top: 4rem;
+  }
+  .divider {
+    width: 20%;
+    height: 2px;
+    background-color: #b7b7b7;
+    margin: auto;
+    margin-top: 2.5rem;
+  }
+  .container {
+    display: grid;
+    grid-auto-rows: minmax(100px, auto);
+    padding: 4rem 0;
+
+    @include breakpoint($small) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    @include breakpoint($medium) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include breakpoint($large) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include breakpoint($x-large) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    span {
+      font-family: $primary-font;
+    }
+    h3 {
+      font-family: $primary-font;
+      padding-bottom: 1rem;
+    }
+    i {
+      color: #d6d6d6c7;
+    }
+    a {
+      color: #c1b99f;
+      font-family: $links;
+      font-size: 1.2rem;
+      padding-left: 0.5rem;
+      text-decoration: none;
+      &:hover {
+        color: $hover-color;
+      }
+    }
+  }
+}
