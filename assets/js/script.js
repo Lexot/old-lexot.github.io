@@ -2,34 +2,34 @@ $(document).ready(function() {
   //AOS.init();
   $(".ti-1").hover(
     function() {
-      $(".img-1").fadeIn();
+      toggleImage(1);
     },
     function() {
-      $(".img-1").hide();
+      toggleImage(1);
     }
   );
   $(".ti-2").hover(
     function() {
-      $(".img-2").fadeIn();
+      toggleImage(2);
     },
     function() {
-      $(".img-2").hide();
+      toggleImage(2);
     }
   );
   $(".ti-3").hover(
     function() {
-      $(".img-3").fadeIn();
+      toggleImage(3);
     },
     function() {
-      $(".img-3").hide();
+      toggleImage(3);
     }
   );
   $(".ti-4").hover(
     function() {
-      $(".img-4").fadeIn();
+      toggleImage(4);
     },
     function() {
-      $(".img-4").hide();
+      toggleImage(4);
     }
   );
 
